@@ -3,15 +3,19 @@ import random
 
 pygame.init()
 
+#Create window size of magic 8 ball
 screen = pygame.display.set_mode((400, 400))
 
+#Change of program
 pygame.display.set_caption("Magic 8 Ball")
 
 #Magic 8 ball background
 background = pygame.image.load('8ball.png')
 
+#Create font to render message with
 font = pygame.font.Font('freesansbold.ttf', 32)
 
+# Refershes message for magic 8 ball
 def message():
 	screen.blit(background, (0, 0))
 	pygame.display.update()
@@ -39,5 +43,5 @@ while running:
 	m1, m2, m3 = pygame.mouse.get_pressed()
 	if m1 == True:
 		message()	
-		
+
 	pygame.display.update()
